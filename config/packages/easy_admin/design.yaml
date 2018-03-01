@@ -1,0 +1,12 @@
+easy_admin:
+    site_name: 'Dbuy'
+    design:
+      color_scheme: 'light'
+      #assets: #https://symfony.com/doc/master/bundles/EasyAdminBundle/book/design-configuration.html
+      #            css:
+                      # HTTP protocol-relative URL
+      #                - '//example.org/css/admin1.css'
+      #            js:
+                      # this option works exactly the same as the 'css' option
+      #                - '//example.org/js/admin1.js'
+      #favicon: '/assets/backend/favicon.png'

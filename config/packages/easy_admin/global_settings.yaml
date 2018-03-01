@@ -1,0 +1,15 @@
+easy_admin:
+    list:
+        max_results: 20
+        actions:
+          - { name: 'new', label: 'Добавить', icon: 'plus-square-o' }
+          - { name: 'search', label: 'Искать', icon: 'search' }
+          - { name: 'edit', label: 'Изменить', icon: 'pencil' }
+          - { name: 'delete', label: 'Удалить', icon: 'trash' }
+    formats:
+        date:     'd/m/Y'
+        time:     'H:i'
+        datetime: 'H:i:s d/m/Y'
+
+framework:
+    translator: { fallbacks: [ "ru" ] }

@@ -1,0 +1,91 @@
+note: ПРИМЕЧАНИЕ
+tip: СОВЕТ
+not_available: Недоступно
+mit_license: 'MIT Лицензия'
+http_error.name: 'Ошибка %status_code%'
+http_error.description: 'Произошла неизвестная ошибка (HTTP %status_code%), которая помешала выполнить ваш запрос.'
+http_error.suggestion: 'Попробуйте загрузить эту страницу снова через несколько минут или <a href="%url%">вернитесь на главную страницу</a>.'
+http_error_403.description: 'У вас нет разрешения на доступ к этому ресурсу.'
+http_error_403.suggestion: 'Запросите доступ к этому ресурсу у вашего менеджера или системного администратора.'
+http_error_404.description: 'Мы не смогли найти запрашиваемую вами страницу.'
+http_error_404.suggestion: 'Проверьте корректность введенного URL или <a href="%url%">вернитесь на главную страницу</a>.'
+http_error_500.description: 'Произошла внутренняя ошибка сервера.'
+http_error_500.suggestion: 'Попробуйте загрузить эту страницу снова через несколько минут или <a href="%url%">вернитесь на главную страницу</a>.'
+title.homepage: 'Добро пожаловать в <strong>Symfony Demo</strong> приложение'
+title.source_code: 'Исходный код, который использовался для отображения этой страницы'
+title.controller_code: 'Код контроллера'
+title.twig_template_code: 'Код шаблона Twig'
+title.login: Авторизация
+title.post_list: 'Список записей'
+title.edit_post: 'Изменение записи #%id%'
+title.add_comment: 'Добавить комментарий'
+title.comment_error: 'Произошла ошибка во время публикации вашего комментария'
+action.show: Показать
+action.show_post: 'Показать запись'
+action.show_code: 'Показать код'
+action.edit: Изменить
+action.edit_post: 'Изменить запись'
+action.save: 'Сохранить изменения'
+action.delete_post: 'Удалить запись'
+delete_post_modal.title: 'Вы уверены, что хотите удалить эту запись?'
+delete_post_modal.body: 'Это действие не может быть отменено.'
+label.delete_post: 'Удалить запись'
+label.cancel: Отменить
+action.create_post: 'Создать новую запись'
+label.create_post: 'Создать запись'
+label.save_and_create_new: 'Сохранить и создать новую'
+action.back_to_list: 'Назад к списку записей'
+action.publish_comment: 'Опубликовать комментарий'
+action.sign_in: Войти
+action.browse_app: 'Перейти в публичный раздел'
+action.browse_admin: 'Перейти в панель управления'
+label.title: Название
+label.author: Автор
+label.author_email: 'Email автора'
+label.username: Логин
+label.password: Пароль
+label.role: Роль
+label.content: Содержание
+label.summary: 'Краткое содержание'
+label.published_at: Опубликовано
+label.tags: Теги
+label.actions: Действия
+title.post_new: 'Создание записи'
+action.edit_contents: 'Изменить содержание'
+menu.toggle_nav: 'Переключить навигацию'
+menu.choose_language: 'Выбрать язык'
+menu.post_list: 'Список записей'
+menu.back_to_blog: 'Назад к блогу'
+menu.homepage: 'Главная страница'
+menu.admin: 'Панель управления'
+menu.logout: Выйти
+menu.rss: 'RSS Записей Блога'
+menu.search: Поиск
+post.to_publish_a_comment: 'опубликовать комментарий'
+post.num_comments: '%count% комментарий|%count% комментария|%count% комментариев'
+post.commented_on: прокомментировано
+post.no_comments: 'Будьте первыми кто прокомментирует эту запись.'
+post.no_posts_found: 'Ни одной записи не найдено.'
+post.created_successfully: 'Запись успешно создана!'
+post.updated_successfully: 'Запись успешно обновлена!'
+post.deleted_successfully: 'Запись успешно удалена!'
+post.search_for: 'Искать запись...'
+post.search_no_results: 'Ничего не найдено'
+notification.comment_created: 'Ваша запись получила комментарий!'
+notification.comment_created.description: 'Ваша запись "%title%" получила новый комментарий. Вы можете прочесть этот коментарий, перейдя по <a href="%link%">этой ссылке</a>'
+help.app_description: 'Это <strong>демо приложение</strong> создано на основе Symfony фреймворка для того, чтобы показать рекомендованный способ разработки Symfony приложений.'
+help.show_code: 'Нажмите на эту кнопку для просмотра исходного кода <strong>Контроллера</strong> и <strong>шаблона</strong>, которые использовались для отображения этой страницы.'
+help.browse_app: 'Перейти в <strong>публичный раздел</strong> демо приложения.'
+help.browse_admin: 'Перейти в <strong>панель управления</strong> демо приложения.'
+help.login_users: 'Используйте любого из следующих пользователей'
+help.role_user: 'обычный пользователь'
+help.role_admin: администратор
+help.reload_fixtures: 'Если эти пользователи не работают, перезагрузите фикстуры приложения, выполнив в консоли следующую команду:'
+help.add_user: 'Если вы хотите создать новых пользователей, воспользуйтесь следующей командой:'
+help.more_information: 'Для дополнительной информации обратитесь к <a href="https://symfony.com/doc">Symfony документации</a>.'
+rss.title: 'Symfony Demo блог'
+rss.description: 'Самые последние записи, опубликованные в Symfony Demo блоге'
+whois.search_placeholder: 'Имя домена или IP'
+whois.searchplaceholder: __whois.searchplaceholder
+'Domain or IP': '__Domain or IP'
+whois.find_button: Найти

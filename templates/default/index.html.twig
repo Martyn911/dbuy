@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{#
+{% block title %}{{ 'whois.check_title_domain_page'|trans({'%domain%': domain}) }}{% endblock %}
+{% block description %}{{ 'whois.check_description_domain_page'|trans({'%domain%': domain}) }}{% endblock %}
+#}
+
+            {% block body %}
+                <div class="row">
+                    <div id="main" class="col-sm-12">
+                        {{ include('default/_flash_messages.html.twig') }}
+
+                        {% block main %}
+                            {{ sg_datatables_render_html(datatable) }}
+                        {% endblock %}
+                    </div>
+                </div>
+            {% endblock %}
+
+
+{% block javascripts %}
+{{ parent() }}
+        <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+        <script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+{% endblock %}
+
+{% block datatables_javascripts %}
+    {{ sg_datatables_render_js(datatable) }}
+{% endblock %}

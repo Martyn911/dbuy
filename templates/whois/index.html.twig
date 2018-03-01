@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'whois.check_title_index'|trans }}{% endblock %}
+{% block description %}{{ 'whois.check_description_index'|trans }}{% endblock %}
+
+{% block body_id 'whois_checker_index' %}
+
+{% block main %}
+
+    {{ include('whois/_form.html.twig', {'form': form}) }}
+
+{% endblock %}
+
+{% block sidebar %}
+    {{ parent() }}
+
+    {{ show_source_code(_self) }}
+{% endblock %}

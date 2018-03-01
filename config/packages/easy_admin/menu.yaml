@@ -1,0 +1,14 @@
+easy_admin:
+  design:
+      menu:
+        #- { label: 'Inventory' }
+        - label: 'Домены'
+          icon: 'list'
+          children:
+            - { entity: 'Domain', label: 'Домены', default: true }
+            - { entity: 'DomainStatus', label: 'Статусы доменов'}
+            - { entity: 'Zone', label: 'Доменные зоны' }
+            - { entity: 'Whois', label: 'Whois доменов' }
+            #https://symfony.com/doc/current/bundles/EasyAdminBundle/book/menu-configuration.html
+            #menu: ['User'/*, 'Product', 'Category'*/]
+            #menu: ['User', 'Product', { entity: 'Category', label: 'Tags' }]

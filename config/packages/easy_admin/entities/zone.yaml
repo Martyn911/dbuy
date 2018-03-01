@@ -1,0 +1,28 @@
+easy_admin:
+  entities:
+              Zone:
+                class: App\Entity\Zone
+                label: 'Доменные зоны'
+                list:
+                  title: "Список доменных зон"
+                  fields:
+                    - 'id'
+                    - { property: 'name', label: 'Имя зоны' }
+                    - { property: 'idn_name', label: 'IDN имя зоны' }
+                    - { property: 'service', label: 'Сайт регистратора', type: 'url' }
+                    - { property: 'status', label: 'Статус', type: 'toggle' }
+                form:
+                  fields: ['name', 'idn_name', 'service', 'status']
+
+
+          #- App\Entity\Domain
+          #- App\Entity\Zone
+          #- App\Entity\Whois
+          #- App\Entity\Whois
+          #- App\Entity\Parameters
+          #- App\Entity\Parameter
+          #- App\Entity\Partner
+          #- App\Entity\Post
+          #- App\Entity\Tag
+          #- App\Entity\Comment
+          #- App\Entity\User

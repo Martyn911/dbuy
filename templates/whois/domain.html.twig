@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'whois.check_title_domain_page'|trans({'%domain%': domain}) }}{% endblock %}
+{% block description %}{{ 'whois.check_description_domain_page'|trans({'%domain%': domain}) }}{% endblock %}
+
+{% block body_id 'whois_checker_domain' %}
+
+{% block main %}
+
+    {{ include('whois/_form.html.twig', {'form': form}) }}
+
+    {{ result|nl2br }}
+
+{% endblock %}
+
+{% block sidebar %}
+    {{ parent() }}
+
+    {{ show_source_code(_self) }}
+{% endblock %}

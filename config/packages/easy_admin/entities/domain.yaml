@@ -1,0 +1,33 @@
+easy_admin:
+  entities:
+    Domain:
+                  class: App\Entity\Domain
+                  label: 'Домены'
+                  list:
+                      title: "Список доменов"
+                      help: "Список всех доменов в системе"
+                      fields:
+                        - 'id'
+                        - { property: 'name', label: 'domain.name' }
+                        - { property: 'idn_name', label: 'IDN имя домена' }
+                        - { property: 'dstatus', label: 'domain.status' }
+                        - { property: 'createdAt', label: 'domain.created.at' }
+                        - { property: 'modifedAt', label: 'Дата изменения' }
+                        - { property: 'expiresAt', label: 'Дата завершения' }
+                        - { property: 'updatedAt', label: 'Дата изменения в базе' }
+                        - { property: 'status', label: 'Статус', type: 'toggle' }
+                  search:
+                      title: "Найденные домены"
+                      fields: ['name']
+                  form:
+                      title: 'Добавить/изменить домен'
+                      form_options: { validation_groups: ['Default'] }
+                      fields:
+                        - { property: 'name', label: 'Имя домена' }
+                        - { property: 'idn_name', label: 'IDN имя домена' }
+                        - { property: 'zone', label: 'Доменная зона', type_options: { required: true } }
+                        - { property: 'dstatus', label: 'Статус домена', type_options: { required: true } }
+                        - { property: 'createdAt', label: 'Дата регистрации' }
+                        - { property: 'modifedAt', label: 'Дата изменения' }
+                        - { property: 'expiresAt', label: 'Дата завершения' }
+                        - { property: 'status', label: 'Статус' }

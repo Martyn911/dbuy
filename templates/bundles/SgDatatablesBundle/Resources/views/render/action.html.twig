@@ -1,0 +1,81 @@
+{##
+ # This file is part of the SgDatatablesBundle package.
+ #
+ # (c) stwe <https://github.com/stwe/DatatablesBundle>
+ #
+ # For the full copyright and license information, please view the LICENSE
+ # file that was distributed with this source code.
+ #}
+{% import _self as macros %}
+
+{% macro link_title(action) %}
+    {% if action.label is same as(null) and action.icon is same as(null) %}
+        {% if action.route is not same as(null) %}
+            {{ action.route }}
+        {% else %}
+            null
+        {% endif %}
+    {% else %}
+        <span class="{{ action.icon }}"></span> {{ action.label }}
+    {% endif %}
+{% endmacro %}
+
+{% macro attributes(attributes) %}
+    {% for key, value in attributes %}
+        {{ key }}="{{ value }}"
+    {% endfor %}
+{% endmacro %}
+
+{% macro confirm_dialog(action) %}
+    {% if action.confirm is same as(true) %}
+        {% if action.confirmMessage is not same as(null) %}
+            onclick="return confirm('{{ action.confirmMessage }}')"
+        {% else %}
+            onclick="return confirm('{{ 'sg.datatables.confirmMessage'|trans({}, 'messages') }}')"
+        {% endif %}
+    {% endif %}
+{% endmacro %}
+
+{% macro href(action, route_parameters) %}
+    {% if action.routeParameters is not same as(null) %}
+        {% if app.request.locale is defined and app.request.locale is not null %}
+            {% if '_locale' in route_parameters|keys %}
+                {% set route_parameters = route_parameters|merge({ '_locale': app.request.locale }) %}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+
+    {% if action.route is not same as(null) %}
+        href="{{ path(action.route, route_parameters) }}"
+    {% else %}
+        href="javascript:void(0);"
+    {% endif %}
+{% endmacro %}
+
+{% macro value(value) %}
+    {% if value is not null %}
+        value="{{ value }}"
+    {% endif %}
+{% endmacro %}
+
+{{ start_html_container|raw }}
+
+{% for actionKey, action in actions %}
+    {% if render_if_actions[actionKey] is same as(true) %}
+        {% if action.button is same as(false) %}
+            {{ action.startHtml|raw }}
+            <a {{ macros.href(action, route_parameters[actionKey]) }} {{ macros.attributes(attributes[actionKey]) }} {{ macros.confirm_dialog(action) }}>
+                {{ macros.link_title(action) }}
+            </a>
+            {{ action.endHtml|raw }}
+        {% else %}
+            {{ action.startHtml|raw }}
+            <button type="button" {{ macros.value(values[actionKey]) }} {{ macros.attributes(attributes[actionKey]) }} {{ macros.confirm_dialog(action) }}>
+                {{ macros.link_title(action) }}
+            </button>
+            {{ action.endHtml|raw }}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+{{ end_html_container|raw }}
